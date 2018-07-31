@@ -1,4 +1,4 @@
-**# pythonic_apps**
+**# pythonic_apps(python 3.6)**
 - dict_as_switch.py this python script showcases using a python dictionary to emulate a switch statement
 - get_definition.py this script uses a json file(data.json) of words and meanings to implement an english
     dictionary of words
