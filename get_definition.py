@@ -1,6 +1,8 @@
 import json
 from difflib import SequenceMatcher, get_close_matches
 
+from conf.config import ENGLISH_DICTIONARY_JSON
+
 
 """
     This program loads a json file of words and their meanings into a python dictionary and 
@@ -8,7 +10,11 @@ from difflib import SequenceMatcher, get_close_matches
     is not found.
 """
 word = input("type a word to get its meaning:")
-word_dict = json.load(open('data.json'))
+try:
+    word_dict = json.load(open(ENGLISH_DICTIONARY_JSON))
+except Exception as err:
+    print(f'something went wrong: {err}')
+    exit()
 
 
 def get_meaning(word):
