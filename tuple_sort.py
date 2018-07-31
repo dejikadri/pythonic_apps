@@ -2,7 +2,7 @@ import csv
 
 
 """
-    Load a csv file and sort by a column using list and tuples
+    Loads an insurance csv file and sorts by the policy number column using list and tuples
 """
 
 with open('FL_insurance_sample.csv') as file_insure:
@@ -23,5 +23,3 @@ with open('sorted.csv', 'w') as sorted_file:
     csv_out.writerow(tuple(fieldnames))
     for row in data_sorted:
         csv_out.writerow(row)
-        #print(row)
-print(tuple(fieldnames))

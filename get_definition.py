@@ -29,6 +29,7 @@ def get_meaning(word):
     elif word.upper() in word_dict:
         return ''.join(word_dict[word.upper()])
     else:
+        # find a word that closely matches the entered word
         close_matches = get_close_matches(word, word_dict.keys(), cutoff=0.8)
         if len(close_matches) == 0:
             return "Word not found"
