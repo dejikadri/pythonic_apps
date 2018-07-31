@@ -2,7 +2,14 @@
 Using A dictionary to perform a python equivalent of a switch statement
 
 """
+operation_to_perform = input('enter the operator (add(ition), sub(traction), mul(tiplication), div(vision)): ')
 
+try:
+    first_int = int(input('Enter First Integer: '))
+    second_int = int(input('Enter Second Integer: '))
+except Exception as err:
+    print(f'Somethings Wrong... : {err}')
+    exit()
 
 def math_operation(operator, first_integer, second_integer):
     """
@@ -22,5 +29,8 @@ def math_operation(operator, first_integer, second_integer):
     result = s_dict.get(operator, lambda: "No Such Operator")()
     return result
 
-print(math_operation("mul", 2, 3))
+try:
+    print(f' Result is: {math_operation(operation_to_perform, first_int, second_int)}')
+except Exception as err:
+    print(f'Somethings Wrong... : {err}')
 
